@@ -1,0 +1,9 @@
+
+{
+    "database": "tmdb",
+    "options": {
+      "dialect": "postgres",
+      "host": "localhost",
+      "logging": false
+    }
+  }
