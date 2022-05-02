@@ -17,9 +17,8 @@
         "sequelize": "^6.16.2"
     },
     "scripts": {
-        "start": "node src/index.js",
-        "server": "nodemon api/server.js",
-        "client": "react-scripts start"
+        "start": "node index.js",
+        "devStart": "nodemon index.js"
     },
     "eslintConfig": {
         "extends": [
