@@ -74,10 +74,10 @@ app.get("/", function (req, res, next) {
     res.sendFile(path.join(__dirname, "./index.html"));
   });
 
-const PORT = process.env.PORT || 3001;
+const PORT =  3001;
 
 db.sync({ force: false}).then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
       console.log("Escuchando en el puerto ", PORT);
     });
 });

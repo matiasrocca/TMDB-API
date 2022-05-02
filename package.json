@@ -17,7 +17,7 @@
         "sequelize": "^6.16.2"
     },
     "scripts": {
-        "start": "nodemon src/index.js",
+        "start": "node src/index.js",
         "server": "nodemon api/server.js",
         "client": "react-scripts start"
     },
