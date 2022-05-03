@@ -4,7 +4,6 @@
     "options": {
       "dialect": "postgres",
       "host": "localhost",
-      "logging": false,
-      "use_env_variable": "DATABASE_URL"
+      "logging": false
     }
   }
