@@ -5,7 +5,7 @@ const path = require("path");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const session = require('express-session')
+const session = require('cookie-session');
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 require('dotenv').config();
