@@ -1,20 +1,9 @@
 
 {
-  "development":{
     "database": "tmdb",
-    "dialect": "postgres",
-    "host": "localhost",
-    "logging": false
-
-  },
-  "production": {
-    "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "dialectOptions": {
-        "ssl": {
-          "require": true,
-          "rejectUnauthorized": false
-        }
-      }
+    "options": {
+      "dialect": "postgres",
+      "host": "localhost",
+      "logging": false
     }
 }
