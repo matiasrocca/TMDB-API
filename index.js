@@ -70,9 +70,11 @@ passport.deserializeUser(function(id, done) {
 
 app.use("/api", routes);
 
+/*
 app.get("/", function (req, res, next) {
     res.sendFile(path.join(__dirname, "./index.html"));
   });
+*/
 
 const PORT =  3001;
 

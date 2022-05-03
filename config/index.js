@@ -1,5 +1,5 @@
-
-const config = require("../config/config.json");
+const dbEngine = process.env.DB_ENVIRONMENT || "development";
+const config = require("../config/config.json")[dbEngine];
 const Sequelize = require("sequelize");
 
 
