@@ -19,10 +19,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
+  origin: ["https://vermillion-dusk-e7418b.netlify.app"],
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true,
+  origin: true,
 }));
 app.use(cookieParser());
 app.use(morgan("tiny"));
