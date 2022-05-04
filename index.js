@@ -15,15 +15,12 @@ const db = require("./config/index");
 const User = require("./models/Users")
 
 const app = express();
-app.set("trust proxy", 1);
-app.use(cors({
-  credentials: true,
-  origin: [process.env.FRONTEND_APP_URL]
-}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("tiny"));
+app.set("trust proxy", 1);
 
 app.use(session({
     secret: "bootcamp",
@@ -71,6 +68,10 @@ passport.deserializeUser(function(id, done) {
       .catch(done)
 });
 
+app.use(cors({
+  credentials: true,
+  origin: [process.env.FRONTEND_APP_URL]
+}));
 app.use("/api", routes);
 
 /*
