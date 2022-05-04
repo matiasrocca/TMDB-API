@@ -18,7 +18,12 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: ["https://627294d277874f12267d972f--vermillion-dusk-e7418b.netlify.app"],
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true,
+  origin: true,
+}));
 app.use(cookieParser());
 app.use(morgan("tiny"));
 
