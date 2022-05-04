@@ -69,6 +69,9 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use(cors({
+  allowedHeaders:{
+    "Access-Control-Allow-Origin": "*"
+  }, 
   origin: [process.env.FRONTEND_APP_URL]
 }));
 app.use("/api", routes);
