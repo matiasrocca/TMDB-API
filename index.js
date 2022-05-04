@@ -69,7 +69,6 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use(cors({
-  credentials: true,
   origin: [process.env.FRONTEND_APP_URL]
 }));
 app.use("/api", routes);
