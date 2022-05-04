@@ -15,8 +15,11 @@ const db = require("./config/index");
 const User = require("./models/Users")
 
 const app = express();
-
-app.use(cors());
+app.set("trust proxy", 1);
+app.use(cors({
+  credentials: true,
+  origin: [process.env.FRONTEND_APP_URL]
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
