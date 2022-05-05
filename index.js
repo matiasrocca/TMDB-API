@@ -82,9 +82,10 @@ app.get("/", function (req, res, next) {
   });
 */
 
+const PORT =  process.env.PORT;
 
 db.sync({ force: false}).then(() => {
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
       console.log("Escuchando en el puerto ", PORT);
     });
 });
