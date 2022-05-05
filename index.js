@@ -82,10 +82,9 @@ app.get("/", function (req, res, next) {
   });
 */
 
-const PORT =  3001;
 
 db.sync({ force: false}).then(() => {
-    app.listen(process.env.PORT || PORT, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Escuchando en el puerto ", PORT);
     });
 });
