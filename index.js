@@ -68,7 +68,9 @@ passport.deserializeUser(function(id, done) {
       .catch(done)
 });
 
-app.use(cors())
+app.use(cors({
+  origin:"https://gentle-arithmetic-c21709.netlify.app"
+}))
 
 app.use("/api", routes);
 
