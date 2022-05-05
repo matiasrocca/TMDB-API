@@ -69,7 +69,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use(cors({
-  origin:"https://gentle-arithmetic-c21709.netlify.app"
+  origin:"*"
 }))
 
 app.use("/api", routes);
