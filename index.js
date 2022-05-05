@@ -82,7 +82,7 @@ app.get("/", function (req, res, next) {
   });
 */
 
-const PORT =  process.env.PORT;
+const PORT =  process.env.PORT || 3001;
 
 db.sync({ force: false}).then(() => {
     app.listen(PORT, () => {
