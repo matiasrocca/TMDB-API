@@ -68,16 +68,14 @@ passport.deserializeUser(function(id, done) {
       .catch(done)
 });
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+var corsOptions = {
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+}
 
-app.use("/api", routes);
+app.use("/api", cors(corsOptions), routes);
 
 /*
 app.get("/", function (req, res, next) {
