@@ -28,6 +28,7 @@ router.get("/all", (req, res, next)=>{
 })
 
 router.get("/all/:search", (req, res, next)=>{
+    console.log(req.cookies)
     const busqueda = req.params.search
 
     User.findAll({
