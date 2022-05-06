@@ -68,14 +68,12 @@ passport.deserializeUser(function(id, done) {
       .catch(done)
 });
 
-var corsOptions = {
-    "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-    "preflightContinue": false,
-    "optionsSuccessStatus": 204
-}
+app.use(cors({
+  "origin": "https://fancy-mochi-325990.netlify.app",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+}));
 
-app.use("/api", cors(corsOptions), routes);
+app.use("/api", routes);
 
 /*
 app.get("/", function (req, res, next) {
