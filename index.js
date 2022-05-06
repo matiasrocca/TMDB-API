@@ -69,7 +69,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use(cors({
-  "origin": "https://fancy-mochi-325990.netlify.app",
+  "origin": "https://fancy-mochi-325990.netlify.app/",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
 
