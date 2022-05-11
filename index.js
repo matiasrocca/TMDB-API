@@ -18,7 +18,7 @@ const app = express();
 app.use(cors({
   "origin": "https://fancy-mochi-325990.netlify.app",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "credentials":true
+  "credentials":true,
 }));
 
 app.use(express.json());
@@ -30,7 +30,10 @@ app.set("trust proxy", 1);
 app.use(session({
     secret: "bootcamp",
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie:{
+      secure:true
+    }
   }))
 
 app.use(passport.initialize());
